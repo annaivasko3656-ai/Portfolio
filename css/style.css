@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #151515;
+    --text-primary: #e0e0e0;
+    --text-secondary: #888888;
+    --accent: #ffffff;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.hero {
+    position: relative;
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../img/me.jpg') center/cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-name {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.hero-title {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    text-transform: lowercase;
+}
+.about {
+    padding: 4rem 2rem;
+    background-color: var(--bg-secondary);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0rem;
+}
+
+.about-text {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin: 4rem 0 3rem;
+    line-height: 15px;
+}
+
+.portfolio {
+    padding: 0 1rem 4rem;
+}
+
+.categories-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.category-card {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+}
+
+.category-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.category-card:hover img {
+    transform: scale(1.05);
+}
+
+.category-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-info h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.view-more {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: 2.5rem;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+}
